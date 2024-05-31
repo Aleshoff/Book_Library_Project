@@ -1,0 +1,30 @@
+﻿<Page x:Class="BooksLibraryDB.View.ListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BooksLibraryDB.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="381" d:DesignWidth="792"
+      Title="ListPage">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" >
+            <TextBlock Text="Name/Title" Width="80" Height="20" Margin="10,0,0,0"/>
+            <TextBox Name="FilterBox" Width="110" Height="20" 
+                     Text="{Binding FilterString, UpdateSourceTrigger=PropertyChanged}" 
+                     />
+        </StackPanel>
+        <DataGrid Name="DataGrid1" IsReadOnly="True" 
+                  MouseDoubleClick="DataGrid1_MouseDoubleClick" 
+                  HeadersVisibility="All"  
+                  ColumnWidth="110" ItemsSource="{Binding View}"
+                  SelectedItem="{Binding Item}"
+                  IsSynchronizedWithCurrentItem="True"
+                  AutoGeneratingColumn="DataGrid1_AutoGeneratingColumn"
+                  ScrollViewer.CanContentScroll="True" 
+                  VerticalScrollBarVisibility="Auto"
+                  Loaded="DataGrid1_Loaded">
+        </DataGrid>
+    </DockPanel>
+</Page>

@@ -1,0 +1,14 @@
+﻿<Page x:Class="BooksLibraryDB.View.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BooksLibraryDB.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="381" d:DesignWidth="792"
+      Title="StartPage">
+
+    <Grid>
+        <TextBlock Text="WELLCOME TO THE BOOK LIBRARY!" Margin="20,166,0,153" Foreground="#FF252591" FontWeight="Bold" FontSize="45" />
+    </Grid>
+</Page>
